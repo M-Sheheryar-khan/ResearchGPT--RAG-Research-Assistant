@@ -97,26 +97,28 @@ Open your browser to `http://localhost:5173`.
 
 ## 🗂️ Project Structure
 
+```
 ResearchGPT/
-├── api.py # FastAPI routes: /ask, /upload, /pdfs, /similar, /stats, /network
-├── llm.py # Ollama integration: streaming answer generation, query rewriting
-├── retriever.py # Context retrieval, distance filtering, dedup, prompt assembly
-├── db.py # ChromaDB operations: upserts, similarity search, stats, network graph
-├── scholar.py # OpenAlex API client and abstract reconstruction
-├── pdf_ingest.py # Text extraction, metadata extraction, chunking
-├── ocr.py # Tesseract OCR fallback for scanned PDFs
-├── embeddings.py # Sentence-Transformers embedding wrapper
-├── ingest.py # CLI utility to bulk-seed the library from a topic
+├── api.py              # FastAPI routes: /ask, /upload, /pdfs, /similar, /stats, /network
+├── llm.py               # Ollama integration: streaming answer generation, query rewriting
+├── retriever.py          # Context retrieval, distance filtering, dedup, prompt assembly
+├── db.py                # ChromaDB operations: upserts, similarity search, stats, network graph
+├── scholar.py            # OpenAlex API client and abstract reconstruction
+├── pdf_ingest.py           # Text extraction, metadata extraction, chunking
+├── ocr.py                # Tesseract OCR fallback for scanned PDFs
+├── embeddings.py           # Sentence-Transformers embedding wrapper
+├── ingest.py             # CLI utility to bulk-seed the library from a topic
 ├── requirements.txt
-├── uploads/ # Uploaded PDFs (gitignored)
-├── vector_database/ # Persistent ChromaDB store (gitignored)
+├── uploads/              # Uploaded PDFs (gitignored)
+├── vector_database/         # Persistent ChromaDB store (gitignored)
 └── frontend/
-├── src/
-│ ├── App.jsx # Main UI: chat, upload, stats, citation graph
-│ ├── App.css
-│ └── main.jsx
-├── package.json
-└── vite.config.js
+    ├── src/
+    │   ├── App.jsx         # Main UI: chat, upload, stats, citation graph
+    │   ├── App.css
+    │   └── main.jsx
+    ├── package.json
+    └── vite.config.js
+```
 
 
 ## 🔬 Technical Implementation Details
