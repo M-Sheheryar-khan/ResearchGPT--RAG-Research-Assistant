@@ -72,8 +72,8 @@ It runs entirely on local infrastructure: local embeddings, a local LLM via Olla
 ### Backend Setup
 
 ```bash
-git clone https://github.com/yourusername/researchgpt.git
-cd researchgpt
+git clone https://github.com/M-Sheheryar-khan/ResearchGPT--RAG-Research-Assistant.git
+   cd ResearchGPT--RAG-Research-Assistant
 
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
@@ -135,8 +135,9 @@ ResearchGPT/
 
 Papers are grouped by title, and their chunk-level embeddings are averaged into a single per-paper vector. Cosine similarity is computed pairwise across all papers in the library:
 
+```
 similarity(i, j) = (v_i · v_j) / (‖v_i‖ ‖v_j‖)
-
+```
 
 For each paper, the top-*k* most similar papers above a similarity threshold become graph edges, deduplicated across both directions, and rendered as a force-directed graph in the frontend.
 
